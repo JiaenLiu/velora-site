@@ -243,34 +243,31 @@ app.innerHTML = `
           <h2>Tools to help you stay hydrated and reduce waste.</h2>
         </div>
         <div class="container innovation-layout">
-          <article class="innovation-panel app-panel">
-            <img class="device-shot" src="/assets/Innovation2.png" alt="Velora hydration tracking mobile app" />
-            <div>
+          <div class="innovation-top">
+            <article class="device-column">
+              <img class="device-shot" src="/assets/Innovation2.png" alt="Velora hydration tracking mobile app" />
+              <div class="innovation-copy-block">
+                <h3>${innovationFeatures[1].title}</h3>
+                <p>${innovationFeatures[1].body}</p>
+              </div>
+            </article>
+            <article class="innovation-copy-block smart-copy">
               <h3>${innovationFeatures[0].title}</h3>
               <p>${innovationFeatures[0].body}</p>
-            </div>
-          </article>
-          <article class="innovation-panel tech-panel">
-            <div>
-              <h3>${innovationFeatures[1].title}</h3>
-              <p>${innovationFeatures[1].body}</p>
-            </div>
-            <img class="product-shot" src="/assets/commitment2.png" alt="Metal bottle components showing insulated construction" />
-          </article>
-          <article class="innovation-panel material-panel">
-            <img src="/assets/Innovation3.png" alt="Close-up of cold ice cubes representing cooling performance" />
-            <div>
+            </article>
+            <figure class="product-column">
+              <img class="product-shot" src="/assets/commitment2.png" alt="Metal bottle components showing insulated construction" />
+            </figure>
+          </div>
+          <div class="innovation-bottom">
+            <figure class="innovation-ice">
+              <img src="/assets/Innovation3.png" alt="Close-up of cold ice cubes representing cooling performance" />
+            </figure>
+            <article class="innovation-copy-block advanced-copy">
               <h3>${innovationFeatures[2].title}</h3>
               <p>${innovationFeatures[2].body}</p>
-            </div>
-          </article>
-          <article class="innovation-panel accent-panel">
-            <img src="/assets/cd797bfc-b14b-4101-9b29-914b8e99f2da.png" alt="Velora production line assembling reusable bottles" />
-            <div>
-              <p class="mini-label">Precision manufacturing</p>
-              <p>Production systems are tuned for repeatable quality, cleaner output, and dependable long-term performance.</p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
     </main>
