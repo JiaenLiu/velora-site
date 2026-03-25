@@ -56,59 +56,50 @@ const innovationFeatures = [
 const footerColumns = [
   {
     title: 'Product',
-    links: ['Overview', 'Technology', 'App Experience', 'Smart Bottle'],
+    links: ['New Smart Bottle', 'App Integration', 'Sustainability'],
   },
   {
     title: 'Support',
-    links: ['Track Order', 'Returns', 'Care Guide', 'Shipping'],
+    links: ['Contact', 'Support Center', 'Delivery & Returns'],
   },
   {
     title: 'Company',
-    links: ['About Velora', 'Our Mission', 'Sustainability', 'Privacy Policy'],
+    links: ['About Velora', 'Our Mission', 'Our Commitment', 'Intelligent Innovation'],
   },
 ];
 
-const utilityIcons = {
-  search: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M11 18a7 7 0 1 1 0-14a7 7 0 0 1 0 14Zm9 3-5.2-5.2" />
-    </svg>
-  `,
-  account: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />
-    </svg>
-  `,
-  instagram: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" />
-    </svg>
-  `,
-  facebook: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" />
-    </svg>
-  `,
-  x: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4 4l6.4 7.8L4.4 20H7l4.6-5.4L16 20h4L13.2 12 19.2 4h-2.6l-4 4.8L8.7 4Z" />
-    </svg>
-  `,
-  linkedin: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.5 8.5H3.5V20h3Zm-1.5-5a1.8 1.8 0 1 0 0 3.6a1.8 1.8 0 0 0 0-3.6ZM20.5 20v-6.2c0-3.3-1.8-4.8-4.2-4.8c-1.9 0-2.8 1.1-3.2 1.8v-1.5h-3V20h3v-5.6c0-1.5.3-2.9 2.2-2.9c1.9 0 1.9 1.8 1.9 3V20Z" />
-    </svg>
-  `,
-  youtube: `
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M21.5 8.2a2.8 2.8 0 0 0-2-2C17.8 5.7 12 5.7 12 5.7s-5.8 0-7.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .5 3.8a2.8 2.8 0 0 0 2 2c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.5-3.8ZM10 15.5v-7l6 3.5Z" />
-    </svg>
-  `,
+const figmaAssets = {
+  search: 'https://www.figma.com/api/mcp/asset/0d089f54-1372-4715-914f-56fd31c57b56',
+  searchHandle: 'https://www.figma.com/api/mcp/asset/2b59b228-4003-49b7-9fc9-0117d25ad46c',
+  userBody: 'https://www.figma.com/api/mcp/asset/5bc5f48f-d0e1-4584-bf57-ee12015ba79e',
+  userHead: 'https://www.figma.com/api/mcp/asset/f0fb0ed9-3619-410c-b2e9-7a480a36fb7b',
+  cartTop: 'https://www.figma.com/api/mcp/asset/01d52984-eea5-41a5-8009-b9992fab6c28',
+  cartBasket: 'https://www.figma.com/api/mcp/asset/7cd36a62-303c-4495-a498-2a97c4abc575',
+  cartBody: 'https://www.figma.com/api/mcp/asset/54f34ee8-721d-4899-bce3-a0f5bef3c927',
+  cartWheel: 'https://www.figma.com/api/mcp/asset/1beb3d8f-50ec-4481-91e9-33e1c9cef4ac',
+  instagram: 'https://www.figma.com/api/mcp/asset/2bdfe3d9-c449-4d03-80c9-9b2306f6cb6b',
+  instagramInner: 'https://www.figma.com/api/mcp/asset/838f840f-3c65-4448-959c-76fb3fbb35e2',
+  instagramDot: 'https://www.figma.com/api/mcp/asset/f6a0cf10-7c52-4372-8b02-1f5dd687566c',
+  x: 'https://www.figma.com/api/mcp/asset/f49c3f68-772c-452d-bd3f-a632c6168799',
+  tiktok: 'https://www.figma.com/api/mcp/asset/9f2d7499-2990-4ba0-b3c2-b308659afca6',
+  facebook: 'https://www.figma.com/api/mcp/asset/d7b75623-032a-453e-abd7-a175d4e628d2',
+  linkedin: 'https://www.figma.com/api/mcp/asset/fd3e3fe2-1a97-4cec-a0a2-8dab056c5095',
+  mastercard: 'https://www.figma.com/api/mcp/asset/ed841a9e-54a0-4bcb-bf5c-048a74ce4663',
+  visa: 'https://www.figma.com/api/mcp/asset/bec0b29f-0360-4039-941f-f0a8269a3b15',
+  applePay: 'https://www.figma.com/api/mcp/asset/2dbca9ba-a9a5-4c75-b510-839f2ec47985',
+  alipay: 'https://www.figma.com/api/mcp/asset/fb3e5bfd-1a2b-4442-9a05-482a0a43936f',
+  paypal: 'https://www.figma.com/api/mcp/asset/afbd1820-d05e-49cc-b4e8-c4b44d04b994',
+  klarna: 'https://www.figma.com/api/mcp/asset/93b3e439-a5e7-4b2f-b7ee-edf75cb0cd52',
 };
 
-const paymentMethods = ['Mastercard', 'VISA', 'Apple Pay', 'Google Pay', 'Klarna'];
+const paymentMethods = [
+  { name: 'Mastercard', src: figmaAssets.mastercard, theme: 'light' },
+  { name: 'Visa', src: figmaAssets.visa, theme: 'light' },
+  { name: 'Apple Pay', src: figmaAssets.applePay, theme: 'light' },
+  { name: 'Alipay', src: figmaAssets.alipay, theme: 'light' },
+  { name: 'PayPal', src: figmaAssets.paypal, theme: 'light' },
+  { name: 'Klarna', src: figmaAssets.klarna, theme: 'pink' },
+];
 
 const app = document.querySelector('#app');
 
@@ -130,11 +121,20 @@ app.innerHTML = `
                 .join('')}
             </div>
             <div class="nav-utilities">
-              <a class="nav-icon" href="#about" aria-label="Search">
-                ${utilityIcons.search}
+              <a class="nav-icon nav-search" href="#about" aria-label="Search">
+                <img class="search-circle" src="${figmaAssets.search}" alt="" />
+                <img class="search-handle" src="${figmaAssets.searchHandle}" alt="" />
               </a>
-              <a class="nav-icon" href="#about" aria-label="Account">
-                ${utilityIcons.account}
+              <a class="nav-icon nav-user" href="#about" aria-label="Account">
+                <img class="user-body" src="${figmaAssets.userBody}" alt="" />
+                <img class="user-head" src="${figmaAssets.userHead}" alt="" />
+              </a>
+              <a class="nav-icon nav-cart" href="#about" aria-label="Cart">
+                <img class="cart-top" src="${figmaAssets.cartTop}" alt="" />
+                <img class="cart-basket" src="${figmaAssets.cartBasket}" alt="" />
+                <img class="cart-body" src="${figmaAssets.cartBody}" alt="" />
+                <img class="cart-wheel cart-wheel-left" src="${figmaAssets.cartWheel}" alt="" />
+                <img class="cart-wheel cart-wheel-right" src="${figmaAssets.cartWheel}" alt="" />
               </a>
               <a class="nav-cta" href="#innovation">Shop Now</a>
             </div>
@@ -278,7 +278,9 @@ app.innerHTML = `
           <div class="footer-brand-block">
             <a class="wordmark footer-wordmark" href="#about">VELORA</a>
             <p class="footer-description">
-              Your everyday hydration companion, thoughtfully built for modern routines, cleaner habits, and lower-impact materials.
+              Smart hydration for a sustainable lifestyle.
+              <br />
+              Track your water intake, reduce plastic waste, and stay healthy with our intelligent water bottle.
             </p>
             <form class="subscribe-form">
               <label class="sr-only" for="email">Email address</label>
@@ -286,11 +288,23 @@ app.innerHTML = `
               <button type="submit">Subscribe</button>
             </form>
             <div class="socials" aria-label="Social media">
-              <a href="#about" aria-label="Instagram">${utilityIcons.instagram}</a>
-              <a href="#about" aria-label="Facebook">${utilityIcons.facebook}</a>
-              <a href="#about" aria-label="X">${utilityIcons.x}</a>
-              <a href="#about" aria-label="LinkedIn">${utilityIcons.linkedin}</a>
-              <a href="#about" aria-label="YouTube">${utilityIcons.youtube}</a>
+              <a class="social-icon instagram-icon" href="#about" aria-label="Instagram">
+                <img class="instagram-outline" src="${figmaAssets.instagram}" alt="" />
+                <img class="instagram-inner" src="${figmaAssets.instagramInner}" alt="" />
+                <img class="instagram-dot" src="${figmaAssets.instagramDot}" alt="" />
+              </a>
+              <a class="social-icon" href="#about" aria-label="X">
+                <img src="${figmaAssets.x}" alt="" />
+              </a>
+              <a class="social-icon" href="#about" aria-label="TikTok">
+                <img src="${figmaAssets.tiktok}" alt="" />
+              </a>
+              <a class="social-icon" href="#about" aria-label="Facebook">
+                <img src="${figmaAssets.facebook}" alt="" />
+              </a>
+              <a class="social-icon" href="#about" aria-label="LinkedIn">
+                <img src="${figmaAssets.linkedin}" alt="" />
+              </a>
             </div>
           </div>
           <div class="footer-columns">
@@ -307,14 +321,22 @@ app.innerHTML = `
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="legal-copy">©2026 Velora. All rights reserved.</p>
+          <p class="legal-copy">© 2026 Velora. All rights reserved.</p>
           <div class="payment-row" aria-label="Payment methods">
-            ${paymentMethods.map((method) => `<span class="payment-chip">${method}</span>`).join('')}
+            ${paymentMethods
+              .map(
+                (method) => `
+                  <span class="payment-chip payment-chip-${method.theme}">
+                    <img src="${method.src}" alt="${method.name}" />
+                  </span>
+                `,
+              )
+              .join('')}
           </div>
           <div class="legal-links">
             <a href="#about">Privacy Policy</a>
-            <a href="#about">Terms &amp; Conditions</a>
-            <a href="#about">Cookie Policy</a>
+            <a href="#about">Use of Cookies</a>
+            <a href="#about">Terms of Use</a>
           </div>
         </div>
       </div>
