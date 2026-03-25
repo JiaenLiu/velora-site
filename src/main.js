@@ -1,10 +1,11 @@
 import './styles.css';
 
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Mission', href: '#mission' },
-  { label: 'Commitment', href: '#commitment' },
-  { label: 'Innovation', href: '#innovation' },
+  { label: 'Home', href: '#about' },
+  { label: 'About Us', href: '#mission' },
+  { label: 'Product', href: '#innovation' },
+  { label: 'Sustainability', href: '#commitment' },
+  { label: 'Support', href: '#footer' },
 ];
 
 const stats = [
@@ -54,40 +55,91 @@ const innovationFeatures = [
 
 const footerColumns = [
   {
-    title: 'Company',
-    links: ['About', 'Mission', 'Impact', 'Contact'],
-  },
-  {
     title: 'Product',
-    links: ['Bottle', 'App', 'Materials', 'Care'],
+    links: ['Overview', 'Technology', 'App Experience', 'Smart Bottle'],
   },
   {
-    title: 'Resources',
-    links: ['Sustainability', 'Support', 'Privacy', 'Terms'],
+    title: 'Support',
+    links: ['Track Order', 'Returns', 'Care Guide', 'Shipping'],
+  },
+  {
+    title: 'Company',
+    links: ['About Velora', 'Our Mission', 'Sustainability', 'Privacy Policy'],
   },
 ];
+
+const utilityIcons = {
+  search: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 18a7 7 0 1 1 0-14a7 7 0 0 1 0 14Zm9 3-5.2-5.2" />
+    </svg>
+  `,
+  account: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />
+    </svg>
+  `,
+  instagram: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" />
+    </svg>
+  `,
+  facebook: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1Z" />
+    </svg>
+  `,
+  x: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4l6.4 7.8L4.4 20H7l4.6-5.4L16 20h4L13.2 12 19.2 4h-2.6l-4 4.8L8.7 4Z" />
+    </svg>
+  `,
+  linkedin: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.5 8.5H3.5V20h3Zm-1.5-5a1.8 1.8 0 1 0 0 3.6a1.8 1.8 0 0 0 0-3.6ZM20.5 20v-6.2c0-3.3-1.8-4.8-4.2-4.8c-1.9 0-2.8 1.1-3.2 1.8v-1.5h-3V20h3v-5.6c0-1.5.3-2.9 2.2-2.9c1.9 0 1.9 1.8 1.9 3V20Z" />
+    </svg>
+  `,
+  youtube: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21.5 8.2a2.8 2.8 0 0 0-2-2C17.8 5.7 12 5.7 12 5.7s-5.8 0-7.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .5 3.8a2.8 2.8 0 0 0 2 2c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.5-3.8ZM10 15.5v-7l6 3.5Z" />
+    </svg>
+  `,
+};
+
+const paymentMethods = ['Mastercard', 'VISA', 'Apple Pay', 'Google Pay', 'Klarna'];
 
 const app = document.querySelector('#app');
 
 app.innerHTML = `
   <div class="page-shell">
     <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#about" aria-label="Velora home">
-          <span class="brand-mark">V</span>
-          <span class="brand-name">VELORA</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-          ${navItems
-            .map((item) => `<a href="${item.href}">${item.label}</a>`)
-            .join('')}
-          <a class="nav-cta" href="#innovation">Learn More</a>
-        </nav>
+      <div class="container">
+        <div class="nav-wrap">
+          <a class="wordmark" href="#about" aria-label="Velora home">VELORA</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+            <div class="nav-links">
+              ${navItems
+                .map((item) => `<a href="${item.href}">${item.label}</a>`)
+                .join('')}
+            </div>
+            <div class="nav-utilities">
+              <a class="nav-icon" href="#about" aria-label="Search">
+                ${utilityIcons.search}
+              </a>
+              <a class="nav-icon" href="#about" aria-label="Account">
+                ${utilityIcons.account}
+              </a>
+              <a class="nav-cta" href="#innovation">Shop Now</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -223,31 +275,50 @@ app.innerHTML = `
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-top">
-        <div>
-          <a class="brand footer-brand" href="#about">
-            <span class="brand-mark">V</span>
-            <span class="brand-name">VELORA</span>
-          </a>
-          <p class="footer-tagline">Designed for your life. Built for the planet.</p>
-          <div class="socials" aria-label="Social media">
-            <a href="#about" aria-label="Instagram">IG</a>
-            <a href="#about" aria-label="LinkedIn">LI</a>
-            <a href="#about" aria-label="X">X</a>
+    <footer class="site-footer" id="footer">
+      <div class="container footer-card">
+        <div class="footer-top">
+          <div class="footer-brand-block">
+            <a class="wordmark footer-wordmark" href="#about">VELORA</a>
+            <p class="footer-description">
+              Your everyday hydration companion, thoughtfully built for modern routines, cleaner habits, and lower-impact materials.
+            </p>
+            <form class="subscribe-form">
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="socials" aria-label="Social media">
+              <a href="#about" aria-label="Instagram">${utilityIcons.instagram}</a>
+              <a href="#about" aria-label="Facebook">${utilityIcons.facebook}</a>
+              <a href="#about" aria-label="X">${utilityIcons.x}</a>
+              <a href="#about" aria-label="LinkedIn">${utilityIcons.linkedin}</a>
+              <a href="#about" aria-label="YouTube">${utilityIcons.youtube}</a>
+            </div>
+          </div>
+          <div class="footer-columns">
+            ${footerColumns
+              .map(
+                (column) => `
+                  <div class="footer-column">
+                    <h3>${column.title}</h3>
+                    ${column.links.map((link) => `<a href="#about">${link}</a>`).join('')}
+                  </div>
+                `,
+              )
+              .join('')}
           </div>
         </div>
-        <div class="footer-columns">
-          ${footerColumns
-            .map(
-              (column) => `
-                <div class="footer-column">
-                  <h3>${column.title}</h3>
-                  ${column.links.map((link) => `<a href="#about">${link}</a>`).join('')}
-                </div>
-              `,
-            )
-            .join('')}
+        <div class="footer-bottom">
+          <p class="legal-copy">©2026 Velora. All rights reserved.</p>
+          <div class="payment-row" aria-label="Payment methods">
+            ${paymentMethods.map((method) => `<span class="payment-chip">${method}</span>`).join('')}
+          </div>
+          <div class="legal-links">
+            <a href="#about">Privacy Policy</a>
+            <a href="#about">Terms &amp; Conditions</a>
+            <a href="#about">Cookie Policy</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -257,6 +328,7 @@ app.innerHTML = `
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
+const subscribeForm = document.querySelector('.subscribe-form');
 
 menuToggle?.addEventListener('click', () => {
   const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -271,4 +343,8 @@ navLinks.forEach((link) => {
     document.body.classList.remove('nav-open');
     menuToggle?.setAttribute('aria-expanded', 'false');
   });
+});
+
+subscribeForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
 });
